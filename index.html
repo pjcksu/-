@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>تم تغيير وجهتك! | نادي العدالة النيابي</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+  <header class="top" id="top">
+    <button class="burger" id="burger" aria-label="فتح القائمة" aria-expanded="false" aria-controls="drawer"><span></span><span></span><span></span></button>
+    <nav class="inav" aria-label="التنقل الرئيسي">
+      <a href="#home" data-nav>الرئيسية</a><a href="#about" data-nav>من نحن</a><a href="#program" data-nav>برنامج الشهر</a><a href="#leaders" data-nav>الهيكل القيادي</a><a href="#join" data-nav>الانضمام</a>
+    </nav>
+  </header>
+  <div id="scrim" hidden></div>
+  <nav id="drawer" aria-label="القائمة" aria-hidden="true">
+    <button class="dclose" id="dclose" aria-label="إغلاق القائمة">×</button>
+    <img class="dlogo" src="assets/club-logo.png" alt="">
+    <a href="#home" data-nav>الرئيسية</a><a href="#about" data-nav>من نحن</a><a href="#program" data-nav>برنامج الشهر</a><a href="#leaders" data-nav>الهيكل القيادي</a><a href="#join" data-nav>الانضمام للنادي</a>
+  </nav>
+  <div id="fx" aria-hidden="true"></div>
+  <main class="home" id="main">
+    <section class="hero" id="home">
+      <img class="logo" src="assets/club-logo.png" alt="شعار نادي العدالة النيابي">
+      <h1>نادي العدالة النيابي</h1>
+      <p class="tag">نــوعي، نمكــنّ ، نُــحدث فرقــاً</p>
+      <div class="btns"><button class="pill fill" data-go="#join">الانضمام للنادي</button><button class="pill line" data-go="#program">اطّلع على برنامج الشهر</button></div>
+      <button class="chev" data-go="#about" aria-label="الانتقال إلى القسم التالي">⌄</button>
+    </section>
+    <section class="sec" id="about">
+      <span class="chip">عن النادي</span>
+      <h2>من نحن</h2>
+      <p class="sub">نادي العدالة النيابي نادٍ طلابي في كلية الحقوق والعلوم السياسية بجامعة الملك سعود. نوعي، نمكّن، نُحدث فرقًا.</p>
+    </section>
+    <section class="sec" id="program">
+      <span class="chip">الفعاليات</span>
+      <h2>برنامج الشهر</h2>
+      <div class="empty"><b>لا توجد فعاليات معلنة حاليًا</b><small>سيظهر برنامج الشهر هنا عند إعلانه.</small></div>
+    </section>
+    <section class="sec" id="leaders">
+      <span class="chip">إدارة النادي</span>
+      <h2>الهيكل القيادي</h2>
+      <p class="sub">لمحة سريعة عن المناصب القيادية الأساسية. للتفاصيل الكاملة، تفضل بزيارة صفحة “من نحن”.</p>
+      <div class="grid">
+        <div class="card" tabindex="0"><i>ر</i><b>رئيس النادي</b><small>معن بن علي الشمري</small></div>
+        <div class="card" tabindex="0"><i>ن</i><b>نائبة الرئيس</b><small>جود بنت غازي المطيري</small></div>
+        <div class="card" tabindex="0"><i>ن</i><b>نائب الرئيس</b><small>سعود بن فهد الدحيلان</small></div>
+      </div>
+      <button class="pill line more" data-go="#about">تفاصيل الهيكل القيادي</button>
+    </section>
+    <section class="sec join" id="join">
+      <span class="chip">انضم إلينا</span>
+      <h2>الانضمام للنادي</h2>
+      <p class="sub">كن جزءًا من النادي.</p>
+      <button class="pill fill" id="joinBtn">الانضمام للنادي</button>
+    </section>
+    <footer class="foot"><img src="assets/club-logo.png" alt=""><small>نادي العدالة النيابي · كلية الحقوق والعلوم السياسية · جامعة الملك سعود</small></footer>
+  </main>
+  <div id="modal" hidden role="dialog" aria-modal="true" aria-labelledby="mt"><div class="mbox"><h3 id="mt">الانضمام للنادي</h3><p>سيتوفر نموذج الانضمام قريبًا.</p><button class="pill line" id="mclose">إغلاق</button></div></div>
+</div>
+
+<aside id="sys" hidden aria-live="polite">
+  <h3>⚠ حالة النظام: خلل مكتشف</h3>
+  <dl><dt>الاتصال بالموقع</dt><dd>مستقر</dd><dt>مسار الموقع</dt><dd>غير معروف</dd><dt>رمز الخطأ</dt><dd dir="ltr">J-2026</dd></dl>
+  <small>خلل تمثيلي ضمن تجربة تفاعلية، ولا يؤثر على أي موقع حقيقي.</small>
+</aside>
+
+<section id="chat" hidden role="dialog" aria-label="محادثة عَدل">
+  <div class="chead"><div><b>عَدل</b><small>مساعد نادي العدالة النيابي</small></div><span class="onl"><i></i>متصل</span></div>
+  <div id="log" aria-live="polite"></div>
+</section>
+
+<section id="end">
+  <canvas id="grid" aria-hidden="true"></canvas>
+  <div class="endIn">
+    <h1 id="e1"></h1><p id="e2"></p><div class="date" id="e4"></div>
+    <button class="again" id="again"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 12a8.5 8.5 0 1 0 2.6-6.1"/><path d="M3.5 4v4.6h4.6"/></svg><span>إعادة التجربة</span></button>
+  </div>
+  <img class="endLogo" src="assets/club-logo.png" alt="شعار نادي العدالة النيابي">
+</section>
+<script src="script.js"></script>
+</body>
+</html>
